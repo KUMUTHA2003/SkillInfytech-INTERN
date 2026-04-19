@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Landing Page</title>
+        <link rel="stylesheet" href="landstyle.css">
+    </head>
+
+    <body>
+        <nav>
+            <div class="heading">Landing Page</div>
+            <span class="sideMenuButton" onclick="openNavbar()">&#9776</span>
+
+            <div class="navbar">
+                <ul>
+                    <li><a class="links" href="#Home">Home</a></li>
+                    <li><a class="links" href="#about">About</a></li>
+                    <li><a class="links" href="#courses">Courses</a></li>
+                    <li><a class="links" href="#signup">Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- side navigation bar for responsive website -->
+        <div class="sideNavigationBar" id="sideNavigationBar">
+            <a href="#" class="closeButton" onclick="closeNavbar()">&#x274C</a>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Courses</a>
+            <a href="#">Sign Up</a>
+        </div>
+
+        <!-- Content -->
+         <div class="line" id="Home">
+            <div class="side1">
+                <h1 style="margin-bottom: 20px;">WEB DESIGNING AND DEVELOPMENT</h1>
+                <P>
+                    Web developers use software tools and a variety of coding languages to develop the functionality and design of a website.
+                    Web design and development are two distinct but interconnected processes for creating websites. 
+                    Web design focuses on the visual, aesthetic, and user experience (UX) aspects (layout, colors, graphics) using tools like Figma. 
+                    Web development involves coding those designs into a functional, interactive website using languages like HTML, CSS, and JavaScript.
+                </P>
+                <button>
+                    <a href="">Explore More</a>
+                </button>
+            </div>
+            <div class="side2">
+                <img src="D:\OneDrive\Pictures\webdownload.jpg" width="500">
+            </div>
+         </div>
+
+         <div class="line" id="about">
+            <div class="side1">
+            <h1 style="margin-bottom: 20px;">About</h1>
+            <p>
+                Web design focuses on the visual aesthetics, layout, and user experience (UI/UX) of a 
+                website using tools like Figma or Adobe XD. Web development brings these designs to life 
+                through coding (HTML, CSS, JavaScript) for functionality. Together, they create accessible, 
+                responsive, and interactive websites. Web Design (Visuals) Deals with the look, feel, color schemes, 
+                typography, and structure, focusing on how a user interacts with the site.
+                Web Development (Functionality) Involves coding the site's structure (front-end) and managing servers, 
+                databases, and APIs (back-end) to make it operational.
+            </p>
+            <br>
+            <p>
+                Web development refers to building, creating, and maintaining websites. It includes aspects such as web 
+                design, web publishing, web programming, and database management. It is the creation of an application that 
+                works over the internet. Users access a website through a web browser such as Chrome, Firefox, or Safari.
+                Browser sends an HTTP request to the web server to fetch the required webpage.
+                Web server processes the request and may interact with a database to retrieve or store data.
+                After processing, the server sends a response back to the browser containing the webpage resources.
+                Browser renders and displays the webpage to the user using security mechanisms like HTTPS to protect data and prevent attacks.
+            </p>
+            </div>
+        </div>
+
+        <section class="about" id="courses">
+            <div class="content">
+                <div class="title"><span>Courses</span></div>
+                <div class="boxes">
+                    <div class="box">
+                        <div class="topic">
+                            <a href="" target="_blank">DSA</a>
+                        </div>
+                        <p>
+                            The term DSA stands for Data Structure and Algorithms. 
+                            AS the name itself suggests, it is a combination of two separate yet interrelated topics.
+                        </p>
+                    </div>
+
+                    <div class="box">
+                        <div class="topic">
+                            <a href="" target="_blank">PYTHON</a>
+                        </div>
+                        <p>
+                            Python is an interpreted, interactive, high level and object oriented scripting language.
+                            It is used to web development, AI, machine learning, operating systems, numerical computing, game development
+                            and mobile applications. 
+                        </p>
+                    </div>
+
+                    <div class="box">
+                        <div class="topic">
+                            <a href="" target="_blank">VISUAL BASIC</a>
+                        </div>
+                        <p>
+                            Visual Basic is an application development tool and event-driven programming language. It is a well-known programming 
+                            language created and developed by microsoft. It is used to create executable files that can run independently.
+                        </p>
+                    </div>
+
+                    <div class="box">
+                        <div class="topic">
+                            <a href="" target="_blank">HTML</a>
+                        </div>
+                        <p>
+                            HTML stands for HyperText Markup Language. It is used to design web pages using the markup language.
+                        </p>
+                    </div>
+
+                    <div class="box">
+                        <div class="topic">
+                            <a href="" target="_blank">CSS</a>
+                        </div>
+                        <p>
+                           CSS stands for Cascading Style Sheets. It is used to define styles for your web pages including design
+                           and layout for different services using style sheet language.
+                        </p>
+                    </div>
+
+                    <div class="box">
+                        <div class="topic">
+                            <a href="" target="_blank">JAVASCRIPT</a>
+                        </div>
+                        <p>
+                            JavaScript (JS) is the most popular lightweight, interpreted compiled programming language.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="signup">
+            <div class="content">
+                <div class="title"><span>Sign Up</span></div>
+                <div class="contactMenu">
+                    <div class="input1">
+                        <div class="label1">Your Name</div>
+                        <div class="input2">
+                            <input type="text" placeholder="Enter your Name here">
+                        </div>
+                        <div class="label1">
+                            <label>Your Email</label>
+                        </div>
+                        <div class="input2">
+                            <input type="text" placeholder="Enter your Email here">
+                        </div>
+                        <div class="label1">
+                            <label>Your Password</label>
+                        </div>
+                        <div class="input2">
+                            <input type="text" placeholder="Enter your Password here">
+                        </div>
+                        <div class="button">
+                            <button>Sign Up</button>
+                        </div>
+                    </div>
+
+                    <div class="input3">
+                        <div class="rightside1">
+                            <div class="title1">
+                                <span>Contact Us</span>
+                            </div>
+                            <div class="content1">
+                                No.10 Rajagopala Nagar, Arcot, Ranipet-632512, Tamilnadu.
+                            </div>
+                            <div class="title1">
+                                <span>More Information</span>
+                            </div>
+                            <div class="content1">
+                                Greetings to all the Geeks out there! We welcome you to the platform where we consistently strive to offer the best
+                                of education. This platform has been designed for every geek wishing to expand their knowledge, share their knowledge
+                                and is ready to grab their dream job. We have millions of articles, live as well as online courses, thousands of tutorials and much
+                                more just for the geek inside you. Thank you for choosing and supporting us!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Sction -->
+        <footer>
+            <div class="footer">
+                <span>
+                    Created By
+                    <a href="" target="_blank">Kumutha.</a>
+                </span>
+            </div>
+        </footer>
+
+        <script src="landscript.js"></script>
+    </body>
+</html>
