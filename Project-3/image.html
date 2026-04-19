@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery Modal</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f2f2f2;
+            padding: 30px;
+            text-align: center;
+            overflow-y: scroll;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            color: black;
+        }
+        
+        h2 {
+            margin: 25px 0 15px;
+            color: #444;
+            padding-left: 10px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 220px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            overflow: auto;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0 0 15px white;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* scrollbar Design */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #ddd;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #555;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #222;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Image Gallery with Modal</h1>
+    <p>
+        An Image Gallery with Modal is a modern or interactive web page used to display multiple images 
+        in a clean grid layout. When the user clicks any image thumbnail, a modal popup opens 
+        and shows the large preview of that image. This creates an interactive and attractive 
+        user experience. It improves user experience and gives a modern look to the website.
+    </p>
+
+    <h2>Nature Images</h2>
+    <div class="gallery">
+        <img src="D:\OneDrive\Pictures\m1.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\m2.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\m3.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\f1.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\f2.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\f3.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\f4.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\f5.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\f6.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\f7.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\f8.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\s1.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\s2.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\s3.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\s4.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\n1.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\n2.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\n3.jpg" onclick="openModal(this.src)">
+    </div>
+
+    <h2>Animals and Birds Images</h2>
+    <div class="gallery">
+        <img src="D:\OneDrive\Pictures\a1.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\a2.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\a3.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\a4.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\b1.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\b3.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\b2.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\b5.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\a5.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\a6.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\a7.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\a8.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\b7.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\b8.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\b9.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\b10.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\b11.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\b12.jpg" onclick="openModal(this.src)">
+    </div>
+
+    <h2>Technology Images</h2>
+    <div class="gallery">
+        <img src="D:\OneDrive\Pictures\t1.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\t2.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\t3.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\t4.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\t5.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\t6.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\t7.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\t8.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\t9.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\t10.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\t11.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\t12.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\t13.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\t14.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\t15.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\t16.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\t17.jpg" onclick="openModal(this.src)">
+        <img src="D:\OneDrive\Pictures\t18.jpg" onclick="openModal(this.src)">
+    </div>
+
+    <div class="modal" id="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImg">
+    </div>
+
+    <script>
+        function openModal(src) {
+            document.getElementById("modal").style.display = "flex";
+            document.getElementById("modalImg").src = src;
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+
+        document.getElementById("modal").addEventListener("click", function (e) {
+            if (e.target.id === "modal") {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
